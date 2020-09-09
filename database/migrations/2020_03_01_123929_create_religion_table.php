@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateReligionTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+     
     public function up()
     {
         Schema::create('religion', function (Blueprint $table) {
@@ -22,11 +18,7 @@ class CreateReligionTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('religion');

@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateIncomeTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('income', function (Blueprint $table) {
@@ -21,11 +17,7 @@ class CreateIncomeTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('income');

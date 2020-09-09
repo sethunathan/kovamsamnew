@@ -6,22 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePlaceTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+     
     public function up()
     {
-        Schema::create('place', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 100);
-             
-            $table->timestamps();
-            $table->softDeletes();
-
-             
-        });
         
         Schema::create('place', function (Blueprint $table) {
             $table->increments('id');
@@ -30,12 +17,6 @@ class CreatePlaceTable extends Migration
             $table->softDeletes();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('place');

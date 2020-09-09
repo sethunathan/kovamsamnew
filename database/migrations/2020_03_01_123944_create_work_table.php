@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateWorkTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('work', function (Blueprint $table) {
@@ -24,11 +20,7 @@ class CreateWorkTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('work');

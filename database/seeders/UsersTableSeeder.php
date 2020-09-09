@@ -1,6 +1,8 @@
 <?php
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -11,7 +13,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::updateOrcreate(
+        User::updateOrcreate(
             [
                 'email' => 'admin@ethree.com',
             ],
@@ -19,6 +21,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Super Admin',
                 'contactno' => '7402058490',
                 'email' => 'admin@ethree.com',
+                'isadmin' => '1',
                 'password' => bcrypt('password'),
                
             ]

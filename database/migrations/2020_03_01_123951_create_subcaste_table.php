@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSubcasteTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+   
     public function up()
     {
         Schema::create('subcaste', function (Blueprint $table) {
@@ -25,11 +21,7 @@ class CreateSubcasteTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+      
     public function down()
     {
         Schema::dropIfExists('subcaste');
