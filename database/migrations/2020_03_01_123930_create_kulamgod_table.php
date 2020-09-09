@@ -15,7 +15,7 @@ class CreateKulamTable extends Migration
     {
         Schema::create('kulam', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100)->unique();        
+           // $table->string('name', 100)->unique();        
             $table->timestamps();
             $table->softDeletes();
 
