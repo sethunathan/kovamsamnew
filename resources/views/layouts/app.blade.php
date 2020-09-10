@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'kovamsamtimes.com') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
@@ -35,7 +35,7 @@
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <x-jet-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
-                                   Admin Dashboard
+                                    Dashboard
                                 </x-jet-nav-link>
                             </div>
                         </div>
@@ -56,10 +56,14 @@
                                     </div>
 
                                     <x-jet-dropdown-link href="/user/profile">
-                                       Change Password
+                                        Profile
                                     </x-jet-dropdown-link>
 
-                                   
+                                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                                        <x-jet-dropdown-link href="/user/api-tokens">
+                                            API Tokens
+                                        </x-jet-dropdown-link>
+                                    @endif
 
                                     <div class="border-t border-gray-100"></div>
 
@@ -124,7 +128,7 @@
                 <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <x-jet-responsive-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
-                            Admin Dashboard
+                            Dashboard
                         </x-jet-responsive-nav-link>
                     </div>
 
