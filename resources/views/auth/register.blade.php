@@ -19,6 +19,14 @@
                 <x-jet-input class="block mt-1 w-full" type="text" name="contactno" :value="old('contactno')" required />
             </div>
 
+            <div class="mt-4">
+                <x-jet-label value="Password " />
+                <x-jet-input class="block mt-1 w-full"  readonly
+                 value="password" type="text" name="password"
+                 value="password" required />
+            </div>
+
+
              
 
             <div class="flex items-center justify-end mt-4">
