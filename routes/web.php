@@ -22,3 +22,10 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    });
+});
