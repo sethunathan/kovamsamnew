@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('livewire/helloworld');
-   // return view('welcome');
+   
+   return view('welcome');
 
 });
 
