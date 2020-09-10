@@ -16,8 +16,8 @@
             @csrf
 
             <div>
-                <x-jet-label value="Mobile No" />
-                <x-jet-input class="block mt-1 w-full" type="text" name="contactno" :value="old('contactno')" 
+                <x-jet-label value="Eamil" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="email" :value="old('email')" 
                        required autofocus />
             </div>
 

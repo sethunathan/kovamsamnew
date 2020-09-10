@@ -1,3 +1,0 @@
-<div>
-   hello {{ $t }}
-</div>
